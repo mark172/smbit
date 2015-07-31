@@ -9,6 +9,8 @@ gem 'sqlite3'
 gem 'devise'
 # use Bootstrap for design
 gem 'bootstrap-sass', '~> 3.3.5.1'
+# Rails Admin
+gem 'rails_admin'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Fontawesome
