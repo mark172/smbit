@@ -10,6 +10,10 @@ class ContactsController < ApplicationController
   # GET /contacts/1
   # GET /contacts/1.json
   def show
+    if @contact.save
+      flash[:success] = "Your message has been sent"
+      redirect_to root_path
+    end
   end
 
   # GET /contacts/new

@@ -1,3 +1,6 @@
+<div class="row">
+  <div class="col-md-4 col-md-offset-4">
+    <div class="well">
 <%= form_for(@contact) do |f| %>
   <% if @contact.errors.any? %>
     <div id="error_explanation">
@@ -11,35 +14,38 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :first_name %><br>
-    <%= f.text_field :first_name %>
+    <%= f.text_field :first_name, class: "form-control"%>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :last_name %><br>
-    <%= f.text_field :last_name %>
+    <%= f.text_field :last_name, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :business_name %><br>
-    <%= f.text_field :business_name %>
+    <%= f.text_field :business_name, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :email %><br>
-    <%= f.text_field :email %>
+    <%= f.text_field :email, class: "form-control" %>
   </div>
-  <div class="field">
+  <div class="field form-group">
     <%= f.label :phone %><br>
-    <%= f.text_field :phone %>
+    <%= f.text_field :phone, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :question1 %><br>
-    <%= f.text_area :question1 %>
+  <div class="field form-group">
+    <%= f.label :"IF YOU WON THIS MONTH’S CAMPAIGN, HOW WOULD YOU GO ABOUT UTILIZING THE 2 FREE HOURS FROM SMBIT?" %><br>
+    <%= f.text_area :question1, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :question2 %><br>
-    <%= f.text_area :question2 %>
+  <div class="field form-group">
+    <%= f.label :"WHAT ARE YOU BIGGEST PAIN POINTS CURRENTLY? Ie…phone bill, desktops, server issues, spam, slow internet &                   connectivity, etc…" %><br>
+    <%= f.text_area :question2, class: "form-control" %>
   </div>
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+    </div>
+  </div>
+</div>
