@@ -2,6 +2,9 @@ class PagesController < ApplicationController
   def index
   end
 
-  def about
+  def admin
+    if current_user
+      redirect_to contacts_path
+    end
   end
 end

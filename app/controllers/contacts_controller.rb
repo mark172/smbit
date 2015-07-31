@@ -1,10 +1,15 @@
 class ContactsController < ApplicationController
+  before_action :authenticate_user!, only: [:edit, :update, :destroy]
   before_action :set_contact, only: [:show, :edit, :update, :destroy]
 
   # GET /contacts
   # GET /contacts.json
   def index
-    @contacts = Contact.all
+    if current_user
+     @contacts = Contact.all
+    else
+      redirect_to new_contact_path
+    end
   end
 
   # GET /contacts/1
@@ -12,6 +17,9 @@ class ContactsController < ApplicationController
   def show
     if @contact.save
       flash[:success] = "Your message has been sent"
+      redirect_to :back
+    else
+      flash[:success] = "Error"
       redirect_to :back
     end
   end

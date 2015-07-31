@@ -36,4 +36,10 @@
 
 <br>
 
-<%= link_to 'New Contact', new_contact_path %>
+
+<% if current_user %>
+    <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+    <%= link_to 'New Contact', new_contact_path %>
+<% else %>
+    <%= link_to "login", new_user_session_path %>
+<% end %>
