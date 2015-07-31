@@ -12,7 +12,7 @@ class ContactsController < ApplicationController
   def show
     if @contact.save
       flash[:success] = "Your message has been sent"
-      redirect_to root_path
+      redirect_to :back
     end
   end
 
