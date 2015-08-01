@@ -11,6 +11,8 @@ gem 'devise'
 gem 'bootstrap-sass', '~> 3.3.5.1'
 # Rails Admin
 gem 'rails_admin'
+# Can Can for authorization
+gem "cancan"
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Fontawesome
