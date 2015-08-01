@@ -15,13 +15,6 @@ class ContactsController < ApplicationController
   # GET /contacts/1
   # GET /contacts/1.json
   def show
-    if @contact.save
-      flash[:success] = "Your message has been sent"
-      redirect_to :back
-    else
-      flash[:success] = "Error"
-      redirect_to :back
-    end
   end
 
   # GET /contacts/new
@@ -40,9 +33,11 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       if @contact.save
-        format.html { redirect_to @contact, notice: 'Contact was successfully created.' }
+        flash[:success] = "Your message has been sent"
+        format.html { redirect_to new_contact_path }
         format.json { render :show, status: :created, location: @contact }
       else
+        flash[:danger] = "Please fix the errors below"
         format.html { render :new }
         format.json { render json: @contact.errors, status: :unprocessable_entity }
       end

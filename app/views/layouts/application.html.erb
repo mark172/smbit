@@ -10,8 +10,7 @@
   <%= render "layouts/header" %>
   <div class="container">
     
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    
     
     <!-- Bootstrap success message -->
     <div class="row">
@@ -35,6 +34,13 @@
     <div class="container">
       <div class="navbar-text pull-left">
         <p class="white-text">SMBIT 2015</p>
+        
+        <% if current_user %>
+          <p><%= link_to "Logout", destroy_user_session_path, method: :delete %></p>
+        <% else %>
+            <p> <%= link_to "login", new_user_session_path %> </p>
+        <% end %>
+
       </div>
     </div>
   </div>
