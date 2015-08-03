@@ -16,9 +16,15 @@
     <div class="row">
       <div class="col-md-4 col-md-offset-4">
         <% flash.each do |key, value| %>
-          <% if key == "notice" || "alert" %>
-              <div class="alert alert-warning alert-dismissible" role="alert">
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <% if key != "alert" %>
+            <div class="alert alert-success alert-dismissible" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span></button>
+              <%= value %>
+            </div> 
+          <% elsif key != "notice" %>
+            <div class="alert alert-danger alert-dismissible" role="alert">
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span></button>
               <%= value %>
             </div>
@@ -27,7 +33,7 @@
               <button type="button" class="close" data-dismiss="alert" aria-label="Close">
               <span aria-hidden="true">&times;</span></button>
               <%= value %>
-              </div>
+            </div>
           <% end %>
         <% end %>
       </div>
