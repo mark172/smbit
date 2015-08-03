@@ -40,12 +40,13 @@
   <!-- Footer -->
   <div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
     <div class="container">
-        <p class="white-text navbar-text pull-left">SMBIT 2015</p>
+        <p class="white-text navbar-text pull-left">&copy SMB IT 2015</p>
         
         <% if current_user %>
-          <p><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "navbar-text pull-right" %></p>
+          <p><%= link_to "Logout", destroy_user_session_path, method: :delete, class: "navbar-text pull-right" %><%= link_to "Dashboard", rails_admin_path, class: "navbar-text pull-right" %></p>
+
         <% else %>
-            <p> <%= link_to "login", new_user_session_path, class: "navbar-text pull-right" %> </p>
+            <p> <%= link_to "Admin", new_user_session_path, class: "navbar-text pull-right" %> </p>
         <% end %>
 
     </div>
