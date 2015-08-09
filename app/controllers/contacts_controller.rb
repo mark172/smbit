@@ -33,6 +33,13 @@ class ContactsController < ApplicationController
 
     respond_to do |format|
       if @contact.save
+        first_name = params[:contact][:first_name]
+        last_name = params[:contact][:last_name]
+        email = params[:contact][:email]
+        phone = params[:contact][:phone]
+        
+        ContactMailer.contact_email(first_name, last_name, email, phone).deliver
+        
         flash[:success] = "Your message has been sent"
         format.html { redirect_to new_contact_path }
         format.json { render :show, status: :created, location: @contact }
