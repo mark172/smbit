@@ -35,10 +35,13 @@ class ContactsController < ApplicationController
       if @contact.save
         first_name = params[:contact][:first_name]
         last_name = params[:contact][:last_name]
+        business_name = params[:contact][:business_name]
         email = params[:contact][:email]
         phone = params[:contact][:phone]
+        question1 = params[:contact][:question1]
+        question2 = params[:contact][:question2]
         
-        ContactMailer.contact_email(first_name, last_name, email, phone).deliver
+        ContactMailer.contact_email(first_name, last_name, business_name, email, phone, question1, question2).deliver
         
         flash[:success] = "Your message has been sent"
         format.html { redirect_to new_contact_path }
