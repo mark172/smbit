@@ -1,29 +1,22 @@
- <!-- Navigation -->
-    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                
-                    <%= link_to (image_tag ("SMBIT_logo_new.png")), root_path, class: "navbar-brand" %>
-               
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><%= link_to 'About', about_path %></li>
-                    <li><%= link_to 'Contact', new_contact_path %></li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    
-    <!-- /.container -->
+<!-- NAVBAR -->
+		<nav class="navbar navbar-default" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-nav">
+						<span class="sr-only">Toggle Navigation</span>
+						<i class="fa fa-bars"></i>
+					</button>
+						<%= link_to (image_tag ("SMBIT_logo_new.png")), root_path, class: "navbar-logo-bigger" %>
+				</div>
+				<!-- MAIN NAVIGATION -->
+				<div id="main-nav" class="navbar-collapse collapse">
+					<ul class="nav navbar-nav navbar-right">
+					    <li><%= link_to "HOME", root_path%></li>
+					    <li><%= link_to "COMPANY", root_path %></li>
+                        <li><%= link_to 'SERVICES', root_path %></li>
+                        <li><%= link_to 'CONTACT', new_contact_path %></li>
+					</ul>
+				</div>
+				<!-- END MAIN NAVIGATION -->
+			</div>
+		</nav>
