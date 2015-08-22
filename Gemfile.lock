@@ -93,6 +93,8 @@ GEM
       railties (>= 3.2, < 5.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    google-webfonts (0.2.0)
+      actionpack (>= 3.0.0)
     haml (4.0.7)
       tilt
     hike (1.2.3)
@@ -230,6 +232,7 @@ DEPENDENCIES
   compass-rails!
   devise
   font-awesome-rails (~> 4.3.0.0)
+  google-webfonts (~> 0.2.0)
   jbuilder (~> 2.0)
   jquery-rails
   pg (~> 0.18.2)
