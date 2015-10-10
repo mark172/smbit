@@ -7,4 +7,12 @@ class PagesController < ApplicationController
   
   def services
   end
+  
+  def products
+  end
+  
+  def download
+    send_file 'GreenCloud.png', :type=>"application/pdf", :x_sendfile=>true
+  end
+
 end
