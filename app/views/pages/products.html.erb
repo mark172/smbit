@@ -1,21 +1,31 @@
 <div class="container">
+  
+  <div class="jumbotron">
+    <h2 class="hero-heading">Managed/Proactive IT Services Solutions</h2>
+  </div>
+  
   <div class="row">
     <div class="col-sm-6 col-md-4">
       <div class="thumbnail">
         <%= image_tag "ManagedAntiVirus_Flysheet.png" %>
         <div class="caption">
-          <h3>Managed Anti Virus</h3>
-          <p><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalVirus">More info</button> <%= link_to "Raw blast output", "/GreenCloud.png" %>
-</p>
+          <h3>Managed Anti-Virus</h3>
+          <p>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalVirus">More info</button> 
+            <%= link_to "View PDF", "/resource/ManagedAntiVirusFlysheet.pdf", class: "btn btn-primary", :target => "_blank" %>
+          </p>
         </div>
       </div>
     </div>
     <div class="col-sm-6 col-md-4">
       <div class="thumbnail">
-        <%= image_tag "ManagedAntiVirus_Flysheet.png" %>
+        <%= image_tag "ProactiveSupportFlysheet.png" %>
         <div class="caption">
-          <h3>Managed Anti Virus</h3>
-          <p><a href="#" class="btn btn-primary" role="button">Download PDF</a></p>
+          <h3>Managed Anti-Virus</h3>
+          <p>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalPro">More info</button> 
+            <%= link_to "View PDF", "/resource/ProactiveSupportFlysheet.pdf", class: "btn btn-primary", :target => "_blank" %>
+          </p>
         </div>
       </div>
     </div>
@@ -23,18 +33,65 @@
 </div>
 
 
+<!-- Anti-Virus modal content -->
 <div class="modal fade" id="modalVirus" tabindex="-1" role="dialog" aria-labelledby="virusModalLabel">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title" id="virusModalLabel">Managed Anti-Virus</h4>
+        <h2 class="modal-title" id="virusModalLabel">Managed Anti-Virus</h2>
       </div>
       <div class="modal-body">
+        <h4>Key Features</h4>
        <ul>
-         <li>Item 1</li>
-         <li>Item 2</li>
+         <li>Enterprise Class Solution</li>
+         <li>Most Advanced Proactive Technology</li>
+         <li>Software Firewall</li>
+         <li>Comprehensive Reporting Provides Transparency</li>
        </ul>
+       <hr>
+         <h4>Benefits of a Managed Anti-virus solution</h4>
+         <ul>
+           <li>Fully Managed Solution for the Same Price as Your Anti-virus Software</li>
+           <li>Reduce Operating Costs</li>
+           <li>Protect Your Company’s Critical Assets and Information</li>
+           <li>A Flexible Security Solution</li>
+           <li>Comprehensive Reporting</li>
+           <li>Total Peace of Mind</li>
+         </ul>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Proactive support modal content -->
+<div class="modal fade" id="modalPro" tabindex="-1" role="dialog" aria-labelledby="proModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h2 class="modal-title" id="virusModalLabel">Proactive Support</h2>
+      </div>
+      <div class="modal-body">
+        <h4>Program Advantages</h4>
+         <ul>
+           <li>Increased Productivity</li>
+           <li>Reduced Business Impact from IT Failures</li>
+           <li>Reduced Network Downtime Through Proactive Maintenance</li>
+         </ul>
+       <hr>
+        <h4>Program Features</h4>
+         <ul>
+           <li>24x7 Advanced Performance Monitoring</li>
+           <li>Scheduled Preventative Maintenance</li>
+           <li>Quarterly Network Health Review </li>
+           <li>Security Management</li>
+           <li>Patch Management</li>
+           <li>Network Operations Center:</li>
+         </ul>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
