@@ -41,7 +41,7 @@ class ContactsController < ApplicationController
         question1 = params[:contact][:question1]
         question2 = params[:contact][:question2]
         
-        ContactMailer.contact_email(first_name, last_name, business_name, email, phone, question1, question2).deliver
+        ContactMailer.contact_email(first_name, last_name, business_name, email, phone, question1, question2).deliver_now
         
         flash[:success] = "Your message has been sent"
         format.html { redirect_to new_contact_path }

@@ -64,3 +64,4 @@ group :production do
   gem 'pg', '~> 0.18.2'
 end
 
+ruby "2.4.0"
